@@ -1,0 +1,6 @@
+# ADDRESS means a read; use R or W to make the operation explicit.
+R 0x0000
+R 0x0004
+W 0x0040
+R 0x0080
+R 0x0000

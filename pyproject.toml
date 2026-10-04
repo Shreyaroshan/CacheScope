@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "cachescope"
+version = "0.1.0"
+description = "An explainable CPU-cache simulator for comparing configurations and replacement policies."
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "MIT" }
+authors = [{ name = "Shreya Roshan" }]
+dependencies = []
+
+[project.optional-dependencies]
+dev = ["pytest>=8"]
+app = ["streamlit>=1.37", "pandas>=2.0", "plotly>=5.0"]
+
+[project.scripts]
+cachescope = "cachescope.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
+addopts = "-q"
